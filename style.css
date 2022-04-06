@@ -1,0 +1,45 @@
+body {
+    background: url("background.jpg"), linear-gradient(red, yellow, skyblue);
+}
+
+.snapshot {
+    transition: all 0.1s linear;
+}
+
+.snapshot:hover {
+    background-color: #f34;
+}
+
+canvas {
+    border-style: dashed;
+    border-color: black;
+    animation-name: animate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+    0% {
+        box-shadow: 5px 5px 10px 3px rgb(234, 82, 95);
+        right: 0px;
+    }
+
+    25% {
+        box-shadow: 5px 5px 10px 3px rgb(166, 240, 87);
+        right: 35px;
+    }
+
+    50% {
+        box-shadow: -5px -5px 10px 3px rgb(114, 243, 246);
+        left: 35px;
+    }
+
+    75% {
+        box-shadow: -5px -5px 10px 3px rgb(224, 239, 86);
+    }
+
+    100% {
+        box-shadow: 5px 5px 10px 3px rgb(126, 115, 242);
+        right: 70px;
+    }
+}
